@@ -1,0 +1,176 @@
+body {
+  font-family: "rubik";
+  background-color: #ffffff; /* Gunakan font dari Google Fonts */
+}
+
+
+.rubik {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Pusatkan semua elemen di tengah horizontal */
+  text-align: center; /* Pastikan teks juga sejajar */
+  padding-top: 115px;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ff2d55;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.profile-pic img {
+  border: #ffffff;
+  outline: 20px solid #ffffff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.konten img {
+  position: absolute;
+  top: 94px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Meletakkan canvas di belakang */
+
+  height: 270px;
+}
+.banner {
+  width: 100%;
+  height: 204px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Pusatkan semua elemen di tengah horizontal */
+  text-align: center; /* Pastikan teks juga sejajar */
+}
+.konten {
+  width: 10px;
+}
+h1 {
+  justify-content: center;
+  align-items: center;
+  font-size: px;
+  font-weight: bold;
+  color: #202020;
+}
+
+h2 {
+  margin: 15px 0 5px;
+  font-size: 20px;
+  font-weight: regular;
+}
+
+.description {
+  font-size: 14px;
+  color: #000000;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #ff2d55;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 4;
+}
+
+#rive-canvas {
+  position: absolute;
+  top: 284px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3; /* Meletakkan canvas di belakang */
+  width: 900px; /* Sesuaikan ukuran canvas */
+ 
+  margin: 0 auto;
+  pointer-events: auto;
+}
+#rive-canvas2 {
+  position: fixed;
+  top: 474px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3; /* Meletakkan canvas di belakang */
+  width: 1888px; /* Sesuaikan ukuran canvas */
+ 
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+.grid-item {
+  width: 100px;
+
+  padding: 10px;
+  width: 300px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.grid-item img {
+  border-radius: 8px;
+  width: 100%;
+  display: block;}
+
+
+.grid-item:hover img {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.02); /* Membesarkan gambar 10% */
+}
+
+.grid-item h3 {
+  text-decoration: none;
+  color: #202020;
+  font-size: 21px;
+  text-align: left;
+  font-weight: 440; /* Atur ketebalan font untuk judul */
+  margin: 10px; /* Atur margin atas dan bawah untuk judul */
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 10px; /* Atur margin atas untuk tags */
+}
+
+.tag {
+  background-color: #f0f0f0; /* Warna latar belakang */
+  border-radius: 12px; /* Sudut yang membulat */
+  padding: 5px 10px; /* Padding dalam elemen tag */
+  font-size: 12px; /* Ukuran font */
+  color: #333; /* Warna teks */
+}
+
+a {
+  text-decoration: none; /* Menghilangkan garis bawah pada text yang ada linknya */
+}
+
+/* Media Queries untuk tampilan responsif */
+#loader{
+  position:fixed; inset:0; background:#fff; display:flex; 
+  align-items:center; justify-content:center; z-index:9999; transition:opacity .3s;
+}
+#loader.hidden{ opacity:0; pointer-events:none; }
+.loader-box{ width:min(420px,90%); font:500 14px/1.4 "Rubik",system-ui; color:#111; text-align:center; }
+.bar{ width:100%; height:8px; background:#eee; border-radius:999px; overflow:hidden; margin-bottom:8px; }
+#bar{ display:block; height:100%; width:0%; background:#ff4d6d; transition:width .15s; }
+.pct{ font-size:14px; margin-bottom:6px;}
+.note{ opacity:.6; }
