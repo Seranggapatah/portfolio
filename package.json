@@ -2,14 +2,32 @@
   "name": "html-css",
   "version": "1.0.0",
   "description": "A template for HTML and CSS",
-  "main": "index.html",
   "scripts": {
-    "start": "serve"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
-  "keywords": ["html", "css"],
+  "staticFiles": {
+    "staticPath": "static"
+  },
+  "keywords": [
+    "html",
+    "css"
+  ],
   "author": "Ives van Hoorne",
   "license": "MIT",
   "devDependencies": {
-    "serve": "11.2.0"
+    "@types/imagesloaded": "^4.1.7",
+    "@types/masonry-layout": "^4.2.8",
+    "@types/node": "^25.2.2",
+    "parcel": "^2.16.4",
+    "parcel-reporter-static-files-copy": "^1.5.3",
+    "serve": "11.2.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@esotericsoftware/spine-player": "^4.2.101",
+    "@rive-app/canvas": "^2.34.3",
+    "imagesloaded": "^5.0.0",
+    "masonry-layout": "^4.2.2"
   }
 }

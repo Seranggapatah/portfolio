@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="icon" href="images/pp.png" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Angga Motion Portfolio</title>
-  
-  <!-- Library eksternal -->
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-  <script src="https://unpkg.com/@rive-app/canvas@2.26.4/rive.js"></script>
 
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-
-  <!-- Spine Web Player -->
- <script src="https://unpkg.com/@esotericsoftware/spine-player@4.2.41/dist/iife/spine-player.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/@esotericsoftware/spine-player@4.2.41/dist/spine-player.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@esotericsoftware/spine-player@4.2.41/dist/spine-player.css">
 </head>
+
 <body>
 
   <!-- Banner -->
@@ -26,14 +20,14 @@
       <img src="images/Banner.jpg" alt="Banner">
     </div>
   </div>
-<!-- Loader overlay -->
-<div id="loader">
-  <div class="loader-box">
-    <div class="bar"><span id="bar"></span></div>
-    <div class="pct" id="pct">0%</div>
-    <div class="note">Loading portfolio…</div>
+  <!-- Loader overlay -->
+  <div id="loader">
+    <div class="loader-box">
+      <div class="bar"><span id="bar"></span></div>
+      <div class="pct" id="pct">0%</div>
+      <div class="note">Loading portfolio…</div>
+    </div>
   </div>
-</div>
 
   <!-- Container utama -->
   <div class="container">
@@ -53,25 +47,10 @@
     </div>
   </div>
 
-<div id="spine" style="width:500px;height:500px;"></div>
-<script>
-  new spine.SpinePlayer("spine", {
-    jsonUrl:  "spine/zzz-Recovered.json",   // <-- pakai jsonUrl
-    atlasUrl: "spine/zzz-Recovered.atlas",  // <-- pakai atlasUrl
-    animation: "idle",
-    backgroundColor: "#00000000",
-    alpha: true,
-    showControls: false,
-    success: (player) => {
-      console.log("Animations:", player.skeleton.data.animations.map(a => a.name));
-    },
-    error: (player, reason) => console.error("Spine error:", reason)
-  });
-</script>
+  <div id="spine" style="width:500px;height:500px;"></div>
 
-
-
-  <!-- Script lokal -->
-  <script src="script.js"></script>
+  <!-- Script entry point -->
+  <script type="module" src="src/index.ts"></script>
 </body>
+
 </html>
